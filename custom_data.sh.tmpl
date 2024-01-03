@@ -1,0 +1,10 @@
+# Update your package list.
+# Install Nginx.
+# Display a message on the Nginx landing page that includes the machine’s hostname and IP address.
+
+#!/bin/bash
+sudo apt-get update
+sudo apt-get install -y nginx
+echo "Hello from $(hostname) with IP address $(hostname -I)" | sudo tee /var/www/html/index.nginx-debian.html
+
+
